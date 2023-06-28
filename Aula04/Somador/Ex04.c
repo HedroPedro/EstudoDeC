@@ -8,7 +8,6 @@ int main(){
         soma+= numerador/(float)denom;
         denom++;
         numerador+=2;
-        printf("%i %i ", denom, numerador);
     }
     printf("A soma total e: %.2f", soma);
 }
