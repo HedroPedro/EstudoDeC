@@ -14,9 +14,9 @@ int main(){
             numsEntre10e50 += 1;
             soma += num;
             count++;
+            if(num % 7 == 0){
+                multiplo7 += 1;
         }
-        if(num % 7 == 0){
-            multiplo7 += 1;
         }
     }
     media = soma/(float)count;
