@@ -5,7 +5,7 @@ int main(){
     int classificador[3] = {0, 0, 0};
     int n = 0;
     for(i = 0; i < 10; i++){
-        printf("Digite as notas do %i. aluno: ");
+        printf("Digite as notas do %i. aluno: ", i+1);
         scanf("%i %i %i", &notas[i][0], &notas[i][1], &notas[i][2]);
     }
     for(i = 0; i < 10; i++){
@@ -21,6 +21,6 @@ int main(){
     }
 
     for(i = 0; i < 3; i++){
-        printf("A quantidade de alunos que tiveram a pior nota na %i prova: \n", classificador[i]);
+        printf("A quantidade de alunos que tiveram a pior nota na %i prova: %i\n", i+1, classificador[i]);
     }
 }
