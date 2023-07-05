@@ -11,12 +11,8 @@ int main(){
     printf("%i", totalLetra);
 
     for(i = 0; i < strlen(string); i++){
-        for(j = i; j < totalLetra+i; j++){
-           printf("%c == %c\n",string[j] ,string2[j]);
-            if(string[j] == string2[j]){
-                soma++;
-                
-            }
+        for(j = totalLetra; j < -1; j--){
+
         }
     }
 
