@@ -10,7 +10,6 @@ int main(){
         }
         total++;
     }
-    total--;
     
     printf("O total de caracteres e %i caracteres", total);
 }
