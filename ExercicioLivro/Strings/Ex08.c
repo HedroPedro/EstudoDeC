@@ -16,6 +16,6 @@ int main(){
         substring[count] = '\0';
         printf("%s == %s\n", substring, string2);
         count = 0;
-        strstr
+
     }
 }
