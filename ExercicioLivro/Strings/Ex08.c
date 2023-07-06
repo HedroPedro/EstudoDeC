@@ -1,21 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include <string.h>
 //TODO: terminar esse
 int main(){
-    char string[20], string2[20];
-    int pos, j, totalLetra, existeSub, count = 0;
-    fgets(string, 20, stdin);
-    fgets(string2, 10, stdin);
-    totalLetra = strlen(string2)-1;
-
-    for(pos = 0; pos < strlen(string); pos++){
-        while(count < totalLetra){
-            substring[count] = string[pos+count];
-            count++;
-        }
-        substring[count] = '\0';
-        printf("%s == %s\n", substring, string2);
-        count = 0;
-
-    }
+    
+    int soma1, soma2 = 0;
 }
