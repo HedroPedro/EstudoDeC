@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "string.h": "c",
-        "xutility": "c"
+        "xutility": "c",
+        "time.h": "c"
     }
 }
