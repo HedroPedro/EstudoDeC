@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "string.h": "c",
         "xutility": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "nascimento.h": "c"
     }
 }
