@@ -4,6 +4,7 @@
         "string.h": "c",
         "xutility": "c",
         "time.h": "c",
-        "nascimento.h": "c"
+        "nascimento.h": "c",
+        "atleta.h": "c"
     }
 }
