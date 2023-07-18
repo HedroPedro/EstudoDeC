@@ -23,11 +23,11 @@ int main(){
         setbuf(stdin, NULL);
     }
     for(i = 0; i < 3; i++){
-        for(j = i+1; j < 3; j++){
-            if(difftime(mktime(&listaAtleta[i].nasc), mktime(&listaAtleta[j].nasc)) > 0){
-                atletaTemp = listaAtleta[i];
-                listaAtleta[i] = listaAtleta[j];
-                listaAtleta[j] = atletaTemp;
+        for(j = i; j < 3; j++){
+            if(difftime(mktime(&listaAtleta[i].nasc), mktime(&listaAtleta[j].nasc)) < 0){
+                atletaTemp = listaAtleta[j];
+                listaAtleta[j] = listaAtleta[i];
+                listaAtleta[i] = atletaTemp;
                 printf("\nAtletas %s e %s", listaAtleta[i].nome, listaAtleta[j].nome);
             }
         }
