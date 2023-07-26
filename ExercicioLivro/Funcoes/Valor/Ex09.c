@@ -14,12 +14,13 @@ int main(){
     printf("A media foi de %.2f", calMedia(tolower(opc), notas));
 }
 
+
 float calMedia(char opc, float notas[3]){
     switch (opc){
-    case 'A':
+    case 'a':
         return (notas[0]+notas[1]+notas[2])/3;
     
-    case 'P':
+    case 'p':
         return (notas[0]*5+notas[1]*3+notas[2]*2)/10;
 
     default:
