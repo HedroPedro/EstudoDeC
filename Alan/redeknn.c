@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-const int buff_size = 4*sizeof(float);
-
 typedef struct knn{
     float p[4];
     int classeR;
