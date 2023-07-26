@@ -33,6 +33,7 @@ int main(void){
         }
         if(classeRTemp == knnTeste.classeR)
             totAcerto++;
+        classeRTemp = 0;
         fclose(arquivoTreino);
         arquivoTreino =  fopen("IrisTeste.txt", "r");
         k = 0;
