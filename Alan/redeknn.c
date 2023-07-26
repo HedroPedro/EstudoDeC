@@ -10,8 +10,8 @@ typedef struct knn{
 } knn;
 
 int main(void){
-    FILE *arquivoTeste =  fopen("IrisTreino.txt", "r");
-    FILE *arquivoTreino =  fopen("IrisTeste.txt", "r");
+    FILE *arquivoTeste =  fopen("IrisTeste.txt", "r");
+    FILE *arquivoTreino =  fopen("IrisTreino.txt", "r");
     float menorDist = 2, dist;
     knn knnTeste, knnTreino;
     int i = 0, k = 0, totAcerto = 0, classeRTemp;
