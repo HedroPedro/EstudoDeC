@@ -33,14 +33,14 @@ int main(void){
         }
         if(classeRTemp == knnTeste.classeR)
             totAcerto++;
-        classeRTemp = 0;
         fclose(arquivoTreino);
-        arquivoTreino =  fopen("IrisTeste.txt", "r");
+        arquivoTreino =  fopen("IrisTreino.txt", "r");
         k = 0;
         menorDist = 2;
         i++;
     }
-    printf("%i", totAcerto);
+    float percAcer = (float) totAcerto*100/105;
+    printf("%.2f%%", percAcer);
     fclose(arquivoTeste);
     return 0;
 }
