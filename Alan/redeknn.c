@@ -2,51 +2,51 @@
 #include <stdlib.h>
 #include <math.h>
 
-/////// A ideia desse código é montar um KNN
+// A ideia desse código é montar um KNN
+//
 
 typedef struct knn{
-    float p1, p2, p3, p4;
+    float p[4];
     int classeR;
 } knn;
 
 int main(int agrc, char **argv){
-    FILE *arquivos[2] =  {fopen("IrisTeste.txt", "r"), fopen("IrisTreino.txt", "r")};
-    float menorDist = 2, dist;
+    FILE *arquivoTeste =  fopen("IrisTeste.txt", "r");
+    FILE * arquivoTreino = fopen("IrisTreino.txt", "r");
+    float menorDist = 1, dist = 0;
     knn knnTeste, knnTreino;
-    int totAcerto = 0, classeRTemp;
+    int totAcerto = 0, classeP, i;
 
-    if(arquivos[0] == NULL || arquivos[1] == NULL){
+    if(arquivoTeste == NULL || arquivoTreino == NULL)
         return 1;
-    }
 
-    /*while(!feof(arquivoTeste)){
-        fscanf(arquivoTeste,"%f,%f,%f,%f,%i", &knnTeste.p[0], &knnTeste.p[1], &knnTeste.p[2], &knnTeste.p[3], &knnTeste.classeR);
+    while(!feof(arquivoTeste)){
+        for(i = 0; i < 4; i++)
+            fscanf(arquivoTeste,"%f,", &knnTeste.p[i]); //Inicializa os pontos de KNN Teste
+        fscanf(arquivoTeste,"%d", &knnTeste.classeR);
         while(!feof(arquivoTreino)){
-            fscanf(arquivoTreino, "%f,%f,%f,%f,%i\n", &knnTreino.p[0], &knnTreino.p[1], &knnTreino.p[2], &knnTreino.p[3], &knnTreino.classeR);
-            dist = sqrtf(powf(knnTeste.p[0]-knnTreino.p[0], 2) + powf(knnTeste.p[1]-knnTreino.p[1], 2)
-            + powf(knnTeste.p[2]-knnTreino.p[2], 2) + powf(knnTeste.p[3]-knnTreino.p[3], 2));
+            for(i = 0; i < 4; i++)
+                fscanf(arquivoTreino,"%f,", &knnTreino.p[i]); //Inicializa os pontos de KNN Treino
+            dist = sqrtf(powf(knnTeste.p[0]-knnTreino.p[0], 2) + 
+            powf(knnTeste.p[1]-knnTreino.p[1], 2) + 
+            powf(knnTeste.p[2]-knnTreino.p[2], 2) + powf(knnTeste.p[3]-knnTreino.p[3], 2));
+            fscanf(arquivoTreino,"%d,", &knnTreino.classeR);
             if(dist < menorDist){
                 menorDist = dist;
-                classeRTemp = knnTreino.classeR;
+                classeP = knnTreino.classeR;
             }
         }
-        if(classeRTemp == knnTeste.classeR)
-            totAcerto++;
-        classeRTemp = 0; 
         fclose(arquivoTreino);
-        arquivoTreino =  fopen("IrisTreino.txt", "r");
+        arquivoTreino = fopen("IrisTreino.txt", "r");
         menorDist = 1;
-    }*/
-
-    for(int i = 0; i < 45; i++){
-        fread(&knnTeste, sizeof(knn), 5, arquivoTeste);
-        for(int j = 0; j < 105; j++){
-            fread(&knnTreino, sizeof(knn), 5, arquivoTeste);
-        }
+        if(classeP == knnTeste.classeR)
+            totAcerto++;
     }
+
+    fclose(arquivoTeste);
+    fclose(arquivoTreino);
 
     float porcAcer = (float) totAcerto*100/45;
     printf("%i\n%.2f%%", totAcerto, porcAcer);
-    fclose(arquivoTeste);
     return 0;
 }
