@@ -2,43 +2,51 @@
 #include <stdlib.h>
 #include <math.h>
 
+/////// A ideia desse código é montar um KNN
+
 typedef struct knn{
-    float p[4];
+    float p1, p2, p3, p4;
     int classeR;
 } knn;
 
-int main(void){
-    FILE *arquivoTeste =  fopen("IrisTeste.txt", "r");
-    FILE *arquivoTreino =  fopen("IrisTreino.txt", "r");
+int main(int agrc, char **argv){
+    FILE *arquivos[2] =  {fopen("IrisTeste.txt", "r"), fopen("IrisTreino.txt", "r")};
     float menorDist = 2, dist;
     knn knnTeste, knnTreino;
-    int i = 0, k = 0, totAcerto = 0, classeRTemp;
+    int totAcerto = 0, classeRTemp;
 
-    if(arquivoTeste == NULL || arquivoTreino == NULL){
+    if(arquivos[0] == NULL || arquivos[1] == NULL){
         return 1;
     }
-    while(i < 105){ //Hax: feof com problema
+
+    /*while(!feof(arquivoTeste)){
         fscanf(arquivoTeste,"%f,%f,%f,%f,%i", &knnTeste.p[0], &knnTeste.p[1], &knnTeste.p[2], &knnTeste.p[3], &knnTeste.classeR);
-        while(k < 45){
+        while(!feof(arquivoTreino)){
             fscanf(arquivoTreino, "%f,%f,%f,%f,%i\n", &knnTreino.p[0], &knnTreino.p[1], &knnTreino.p[2], &knnTreino.p[3], &knnTreino.classeR);
-            dist = sqrt(pow(knnTeste.p[0]-knnTreino.p[0], 2) + pow(knnTeste.p[1]-knnTreino.p[1], 2)
-            + pow(knnTeste.p[2]-knnTreino.p[2], 2) + pow(knnTeste.p[3]-knnTreino.p[3], 2));
-            if(dist < menorDist && dist < 1){
+            dist = sqrtf(powf(knnTeste.p[0]-knnTreino.p[0], 2) + powf(knnTeste.p[1]-knnTreino.p[1], 2)
+            + powf(knnTeste.p[2]-knnTreino.p[2], 2) + powf(knnTeste.p[3]-knnTreino.p[3], 2));
+            if(dist < menorDist){
                 menorDist = dist;
                 classeRTemp = knnTreino.classeR;
             }
-            k++;
         }
         if(classeRTemp == knnTeste.classeR)
             totAcerto++;
+        classeRTemp = 0; 
         fclose(arquivoTreino);
         arquivoTreino =  fopen("IrisTreino.txt", "r");
-        k = 0;
-        menorDist = 2;
-        i++;
+        menorDist = 1;
+    }*/
+
+    for(int i = 0; i < 45; i++){
+        fread(&knnTeste, sizeof(knn), 5, arquivoTeste);
+        for(int j = 0; j < 105; j++){
+            fread(&knnTreino, sizeof(knn), 5, arquivoTeste);
+        }
     }
-    float percAcer = (float) totAcerto*100/105;
-    printf("%.2f%%", percAcer);
+
+    float porcAcer = (float) totAcerto*100/45;
+    printf("%i\n%.2f%%", totAcerto, porcAcer);
     fclose(arquivoTeste);
     return 0;
 }
