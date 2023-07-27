@@ -3,7 +3,7 @@
 #include <math.h>
 
 // A ideia desse código é montar um KNN
-//
+// Utilizamos um struct para agrupar os dados de 
 
 typedef struct knn{
     float p[4];
