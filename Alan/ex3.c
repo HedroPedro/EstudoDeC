@@ -2,7 +2,7 @@
 
 /////////////////////////////////////////////////////////////////////////
 // Programa que verifica se um determinado numero inteiro e primo      //
-// É inserido um número que dentro de um loop (while) e verificado     // 
+// É inserido um número que dentro de um loop (while) e verificado     //
 //se o iterador é divisor do número digitado, caso seja é              //
 //adicionado na contagem de divisores e ao final mostra se ele é primo //
 /////////////////////////////////////////////////////////////////////////

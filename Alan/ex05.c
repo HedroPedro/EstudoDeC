@@ -12,7 +12,7 @@
 #define NUMERO 3121 //Definição do número (poderia ser usado um rand() para obter o mesmo efeito)
 
 int main(){
-    //int numero = 1000 + (rand()%1001); Um jeito de deixar aleatório
+    //int numero = 1000 + (rand()%1000); Um jeito de deixar aleatório
     int n;
     while(n != NUMERO){ //Mantém o jogador preso em um loop até ele acertar
         printf("Digite um numero de 4 digitos: ");

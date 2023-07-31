@@ -8,13 +8,13 @@
 
 int main(){
     int n, prod = 1;
-    while(1){//While infito
+    while(1){//While infinito
         printf("Digite um numero: ");
         scanf("%i", &n);
-        if(n == 0){
+        if(n == 0){//Checa se o numero é zero
             break;
         }
-        prod *= n;
+        prod *= n; //Multiplica os numeros
     }
     printf("O produto e: %i", prod);   
 }

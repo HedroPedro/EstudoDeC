@@ -13,5 +13,5 @@ int main(){
         if(i % 3 == 0 || i % 5 == 0) //Checa se e multiplo e soma, caso seja
             somaMulti+= i;
     }
-    printf("A soma dos multilos foi %i", somaMulti);
+    printf("A soma dos multiplos foi %i", somaMulti);
 }
