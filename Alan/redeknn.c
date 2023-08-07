@@ -23,7 +23,7 @@ int main(void){
             fscanf(arquivoTreino, "%f,%f,%f,%f,%i\n", &knnTreino.p[0], &knnTreino.p[1], &knnTreino.p[2], &knnTreino.p[3], &knnTreino.classeR);
             dist = sqrt(pow(knnTeste.p[0]-knnTreino.p[0], 2) + pow(knnTeste.p[1]-knnTreino.p[1], 2)
             + pow(knnTeste.p[2]-knnTreino.p[2], 2) + pow(knnTeste.p[3]-knnTreino.p[3], 2));
-            if(dist < menorDist && dist < 1){
+            if(dist < menorDist){
                 menorDist = dist;
                 classeRTemp = knnTreino.classeR;
             }
@@ -34,7 +34,7 @@ int main(void){
         fclose(arquivoTreino);
         arquivoTreino =  fopen("IrisTreino.txt", "r");
         k = 0;
-        menorDist = 2;
+        menorDist = 1;
         i++;
     }
     float percAcer = (float) totAcerto*100/105;
