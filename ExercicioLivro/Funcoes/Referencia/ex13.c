@@ -8,7 +8,7 @@ int main(void){
         scanf("%i", &vetor[i]);
     ordenavetor(vetor, 5);
     for(int i = 0; i < 5; i++)
-        printf("%i\n", vetor[i]);
+        printf("%i ", vetor[i]);
 }
 
 void ordenavetor(int *array, int len){

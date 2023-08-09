@@ -5,7 +5,8 @@ void separarvetor(int vetor[], int len);
 int main(void){
     int vetor[10];
     for(int i = 0; i < 10; i++){
-        vetor[i] = i;
+        printf("Digite o %i. numero: ", i+1);
+        scanf("%i", &vetor[i]);
     }
     separarvetor(vetor, 10);
     for(int i = 0; i < 10; i++){

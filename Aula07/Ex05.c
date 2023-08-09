@@ -8,6 +8,8 @@ int main(void){
     int vetor[TAM], resultado;
     for(int i = 0; i < TAM; i++){
         scanf("%i", &vetor[i]);
+        if(vetor[i] == -1)
+            return 1;
     }
     resultado = checaintervalo(vetor, TAM);
     printf("Teve %i numeros entre o intervalo de 10 e 50", resultado);
@@ -16,9 +18,6 @@ int main(void){
 int checaintervalo(int vetor[], int len){
     int j = 0;
     for(int i = 0; i < len; i++){
-        if(vetor[i] == -1){
-            break;
-        }
         if((vetor[i] > 9) && (vetor[i] < 51)){
             j++;
         }

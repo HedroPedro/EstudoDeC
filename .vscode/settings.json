@@ -13,6 +13,8 @@
         "stddef.h": "c",
         "w32api.h": "c",
         "windot11.h": "c",
-        "cstdio": "c"
+        "cstdio": "c",
+        "cmath": "c",
+        "*.tcc": "c"
     }
 }
