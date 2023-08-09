@@ -14,5 +14,7 @@ int main(void){
 }
 
 void mostrarmulti7(int vetor[], int len){
-    
+    for(int i = 0; i < len; i++)
+        if(vetor[i] % 7 == 0)
+            printf("%i ", vetor[i]);
 }

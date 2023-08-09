@@ -7,6 +7,12 @@
         "nascimento.h": "c",
         "atleta.h": "c",
         "ctype.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "_mingw.h": "c",
+        "_cygwin.h": "c",
+        "stddef.h": "c",
+        "w32api.h": "c",
+        "windot11.h": "c",
+        "cstdio": "c"
     }
 }
