@@ -15,6 +15,12 @@
         "windot11.h": "c",
         "cstdio": "c",
         "cmath": "c",
-        "*.tcc": "c"
+        "*.tcc": "c",
+        "corecrt_stdio_config.h": "c",
+        "corecrt.h": "c",
+        "_mingw_mac.h": "c",
+        "_mingw_secapi.h": "c",
+        "functional": "c",
+        "type_traits": "c"
     }
 }
