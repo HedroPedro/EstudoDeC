@@ -16,11 +16,12 @@
         "cstdio": "c",
         "cmath": "c",
         "*.tcc": "c",
-        "gl.h": "c",
-        "glu.h": "c",
-        "glcorearb.h": "c",
-        "python.h": "c",
-        "pymem.h": "c",
-        "stdlib.h": "c"
+        "corecrt_stdio_config.h": "c",
+        "corecrt.h": "c",
+        "_mingw_mac.h": "c",
+        "_mingw_secapi.h": "c",
+        "functional": "c",
+        "type_traits": "c",
+        "header.c": "c"
     }
 }
