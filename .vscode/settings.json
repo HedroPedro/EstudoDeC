@@ -21,6 +21,7 @@
         "_mingw_mac.h": "c",
         "_mingw_secapi.h": "c",
         "functional": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "header.c": "cpp"
     }
 }
