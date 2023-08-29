@@ -22,6 +22,10 @@
         "_mingw_secapi.h": "c",
         "functional": "c",
         "type_traits": "c",
-        "header.c": "cpp"
+        "header.c": "cpp",
+        "array": "c",
+        "compare": "c",
+        "tuple": "c",
+        "utility": "c"
     }
 }
