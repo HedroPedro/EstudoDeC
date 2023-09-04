@@ -13,4 +13,5 @@ void imprimeOla(){
     for(size_t i = 0; i < 2; i++)
         printf("\n%i", *(a+i));
     free(a);
+    a = NULL;
 }

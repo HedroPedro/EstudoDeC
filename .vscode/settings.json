@@ -22,8 +22,8 @@
         "_mingw_secapi.h": "c",
         "functional": "c",
         "type_traits": "c",
-
-        "header.c": "c"
-
+        "header.c": "c",
+        "cstdint": "c",
+        "crtdefs.h": "c"
     }
 }
