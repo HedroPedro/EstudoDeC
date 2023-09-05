@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAXTAM 512
+
 int tamanhoString(char *string);
 
 int compareString(char *str1, char *str2);
@@ -9,12 +11,10 @@ int compareString(char *str1, char *str2);
 int umaStringEstaNaOutra(char *str1, char *str2);
 
 int main(){
-    char *string1, *string2;
-    gets(string1);
-    setbuf(stdin, NULL);
-    gets(string2);
-    setbuf(stdin, NULL);
-    if(umaStringEstaNaOutra == 1)
+    char *string1 = (char * ) malloc(sizeof(char) * 512), *string2 = (char * ) malloc(sizeof(char) * 512);
+    fgets(string1, 512, stdin);
+    fgets(string2, 512, stdin);
+    if(umaStringEstaNaOutra(string1, string2) == 1)
         printf("Esta presente na outra");
     else
         printf("Nao esta presente na outra");
@@ -42,4 +42,5 @@ int compareString(char *str1, char *str2){
 int umaStringEstaNaOutra(char *str1, char *str2){
     int tamStr1 = tamanhoString(str1), tamStr2 = tamanhoString(str2);
     
+    return 0;
 }
