@@ -18,6 +18,4 @@ int main(void){
 void preencheVetor(int *vetor, int tam){
     for(int i = 0; i < tam; i++)
         vetor[i] = i+2;
-
-
 }

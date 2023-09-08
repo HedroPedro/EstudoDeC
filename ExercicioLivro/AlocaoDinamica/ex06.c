@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -23,4 +24,15 @@ int main(void){
     }
     free(coluna);
     free(linha);
+=======
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    int array[5] = {2, 1, 4, 3, 6};
+    for(int i = 0; i < 5; i++){
+        if(((intptr_t) array+i) & 1)
+            printf("%i ", array[i]);
+    }
+>>>>>>> 64cdf471050bf3d8846c12a5e4de7aaee6f5c968
 }
