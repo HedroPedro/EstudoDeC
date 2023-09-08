@@ -22,6 +22,10 @@
         "_mingw_secapi.h": "c",
         "functional": "c",
         "type_traits": "c",
-        "header.c": "c"
+        "header.c": "c",
+        "stdbool.h": "c",
+        "stdlib.h": "c",
+        "limits.h": "c",
+        "syslimits.h": "c"
     }
 }
