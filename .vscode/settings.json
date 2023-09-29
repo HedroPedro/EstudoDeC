@@ -52,6 +52,9 @@
         "streambuf": "c",
         "tuple": "c",
         "typeinfo": "c",
-        "utility": "c"
+        "utility": "c",
+        "stdlib.h": "c",
+        "limits.h": "c",
+        "syslimits.h": "c"
     }
 }
