@@ -20,7 +20,7 @@ int main(void){
     while(i < 105){ //Hax: feof com problema
         fscanf(arquivoTeste,"%f,%f,%f,%f,%i", &knnTeste.p[0], &knnTeste.p[1], &knnTeste.p[2], &knnTeste.p[3], &knnTeste.classeR);
         while(k < 45){
-            fscanf(arquivoTreino, "%f,%f,%f,%f,%i\n", &knnTreino.p[0], &knnTreino.p[1], &knnTreino.p[2], &knnTreino.p[3], &knnTreino.classeR);
+            fscanf(arquivoTreino, "%f,%f,%f,%f,%i", &knnTreino.p[0], &knnTreino.p[1], &knnTreino.p[2], &knnTreino.p[3], &knnTreino.classeR);
             dist = sqrt(pow(knnTeste.p[0]-knnTreino.p[0], 2) + pow(knnTeste.p[1]-knnTreino.p[1], 2)
             + pow(knnTeste.p[2]-knnTreino.p[2], 2) + pow(knnTeste.p[3]-knnTreino.p[3], 2));
             if(dist < menorDist){
