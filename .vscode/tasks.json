@@ -9,6 +9,7 @@
                 "-Wall",
                 "-Wextra",
                 "-O3",
+                "-std=c11",
                 "-g",
                 "${file}",
                 "-o",

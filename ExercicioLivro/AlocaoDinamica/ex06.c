@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
+ 
 int main(void){
     int l, c, i, j;
     printf("Digite a quantidade de linhas e colunas: ");
