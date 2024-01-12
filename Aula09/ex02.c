@@ -1,40 +1,48 @@
 #include <stdio.h>
-#include <string.h>
 
-#define ABC "abcdefghijklmnopqrstuvwxyz"
 #define MAXSIZE 257
+#define MAXSTRING 5
 
-void inverterString(char str[], char strInver[]);
-void cripografarStr(char str[], char charSet[]);
+int strtam(char *str);
 
-int main(){
-    char string[MAXSIZE];
-    char charSet[strlen(ABC)+1];
-    inverterString(ABC, charSet);
-    printf("Digite uma string: ");
-    setbuf(stdin, NULL);
-    fgets(string, MAXSIZE-2, stdin);
-    setbuf(stdin, NULL);
-    cripografarStr(string, charSet);
-    puts(string);
+void showifisinmaxtrix(int tM, char s1[][MAXSIZE], char s2[]);
+
+int main(void){
+    char strings[MAXSTRING][MAXSIZE], str2[MAXSIZE];
+    for(int i = 0; i < 5; i++){
+        printf("Digite a %i frase: ", i+1);
+        setbuf(stdin, NULL);
+        fgets(strings[i], MAXSIZE-2, stdin);
+    }
+    printf("Digite outra string: ");
+    fgets(str2, MAXSIZE, stdin);
+    showifisinmaxtrix(MAXSTRING, strings, str2);
 }
 
-void cripografarStr(char str[], char charSet[]){
-    for(size_t i = 0; i < strlen(str); i++){
-        for(size_t j = 0; j < strlen(charSet); j++){
-            if(str[i] == charSet[j]){
-                str[i] = 'a'+j;
-                break;
-            }
+int strtam(char *str){
+    int count = 0;
+    while(str[count] != '\0'){
+        count++;
+    }
+    return count;
+}
+
+void showifisinmaxtrix(int tM, char s1[][MAXSIZE], char s2[]){
+    int j, sum1, sum2 = 0, i;
+    for(i = 0; i < strtam(s2); i++){
+        sum2 += s2[i];
+    }
+
+    for(i = 0; i < tM; i++){
+        sum1 = 0;
+        for(j = 0; j < strtam(s1[i]); j++){
+            sum1 += s1[i][j];
+        }
+        
+        if(sum1 == sum2){
+            printf("A string %s esta na matrix na %i. posicao", s2, i+1);
+            return;
         }
     }
-}
-
-void inverterString(char str[], char strInver[]){
-    int j = 0;
-    for(int i = strlen(str)-1; i >= 0; i--){
-        strInver[j] = str[i];
-        j++;
-    }
-    strInver[j] = '\0';
+    printf("A string %s nao esta na matrix", s2);
 }
